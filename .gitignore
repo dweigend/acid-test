@@ -36,7 +36,3 @@ coverage/
 # Temporary files
 *.tmp
 *.temp
-
-# Project directories (separate repositories)
-acid-test/
-content-creator/
