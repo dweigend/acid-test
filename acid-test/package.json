@@ -1,0 +1,51 @@
+{
+  "name": "algorithmic-acid-test",
+  "version": "1.0.0",
+  "description": "The Algorithmic Acid Test: How AI Dissolves the Boundaries of Design Research - Transform 2025 Conference Presentation",
+  "type": "module",
+  "private": true,
+  "author": {
+    "name": "David Weigend",
+    "url": "https://weigend.studio",
+    "github": "https://github.com/dweigend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dweigend/acid-test.git"
+  },
+  "homepage": "https://kind-lab.de/transform2025/schedule/25/",
+  "keywords": [
+    "ai-creativity",
+    "design-research",
+    "psychedelic-art",
+    "beat-generation",
+    "human-ai-collaboration",
+    "consciousness-expansion",
+    "slidev-presentation",
+    "transform2025"
+  ],
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "preview": "slidev build && slidev preview",
+    "format": "prettier --write .",
+    "lint": "eslint --ext .vue,.js,.ts ."
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@slidev/cli": "^52.2.4",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "three": "^0.180.0",
+    "vue": "^3.5.21"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
+}

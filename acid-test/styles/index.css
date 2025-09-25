@@ -1,0 +1,477 @@
+/* Terminal CLI meets Neovim - Optimized Theme for Slidev */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+
+/* Nerd Font fallbacks for icons */
+@font-face {
+  font-family: "JetBrainsMono Nerd Font";
+  src: url("https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip")
+    format("truetype");
+  font-display: swap;
+}
+
+:root {
+  /* Neovim-inspired color palette */
+  --terminal-bg: #1a1a1a;
+  --terminal-fg: #ffffff;
+  --terminal-bg-light: #2d2d2d;
+  --terminal-border: #ffffff;
+
+  /* Bright neon color palette for ASCII aesthetics */
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-yellow: #ffff00;
+  --neon-green: #00ff00;
+  --neon-orange: #ff4500;
+  --terminal-white: #ffffff;
+  --terminal-muted: #888888;
+
+  /* Subtle grays */
+  --terminal-gray: #5c6370;
+  --terminal-gray-light: #7c7c7c;
+  --terminal-gray-dark: #3e4451;
+
+  /* Shadows and effects */
+  --terminal-glow: 0 0 20px rgba(164, 228, 0, 0.1);
+  --terminal-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Global styles - Force overrides */
+html,
+body {
+  background: var(--terminal-bg) !important;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", "Fira Code", "Monaco", "Menlo",
+    monospace !important;
+  color: var(--terminal-fg) !important;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+/* Override Slidev's default styles */
+* {
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", "Fira Code", "Monaco", "Menlo",
+    monospace !important;
+}
+
+/* Slidev container */
+#app {
+  background: var(--terminal-bg) !important;
+  padding: 0.5rem !important;
+  height: 100vh !important;
+  box-sizing: border-box !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Main slide container with white border */
+.slidev-layout {
+  background: var(--terminal-bg) !important;
+  color: var(--terminal-fg) !important;
+  padding: 3rem !important;
+  flex: 1 !important;
+  position: relative;
+  border: 2px solid var(--terminal-white) !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+}
+
+/* Force dark background for all slides */
+.slidev-page,
+.slide-content,
+.slidev-layout,
+.slidev-slide,
+.slidev-vclick-target,
+.slidev-vclick-hidden {
+  background: var(--terminal-bg) !important;
+  color: var(--terminal-fg) !important;
+}
+
+/* Override UnoCSS and other defaults */
+.slide-enter-active,
+.slide-leave-active,
+.slide-enter-from,
+.slide-leave-to {
+  background: var(--terminal-bg) !important;
+}
+
+/* Center text override */
+.text-center {
+  text-align: center !important;
+  color: var(--terminal-fg) !important;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 1.5rem 0 1rem 0;
+}
+
+/* Nerd Font icons */
+.nf-icon {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--terminal-white) !important;
+  font-weight: 400 !important;
+  margin-bottom: 2rem;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--terminal-white);
+  font-weight: 400;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+  letter-spacing: 0.05em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--terminal-white);
+  font-weight: 400;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+  letter-spacing: 0.05em;
+}
+
+h4 {
+  color: var(--terminal-white);
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+  letter-spacing: 0.05em;
+}
+
+/* Paragraphs and text */
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 1rem 0;
+  color: var(--terminal-white);
+  font-weight: 300;
+  font-family:
+    "JetBrainsMono Nerd Font", "JetBrains Mono", monospace !important;
+}
+
+/* Links */
+a {
+  color: var(--terminal-white);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--terminal-white);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--terminal-green);
+  border-bottom-color: var(--terminal-green);
+  text-shadow: 0 0 8px rgba(164, 228, 0, 0.3);
+}
+
+/* Code blocks */
+pre,
+code {
+  font-family: "JetBrains Mono", monospace;
+  background: var(--terminal-bg-light);
+  border: 1px solid var(--terminal-border);
+  border-radius: 0;
+}
+
+pre {
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  box-shadow: var(--terminal-shadow);
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.9em;
+  color: var(--terminal-white);
+}
+
+/* Lists */
+ul,
+ol {
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin: 0.5rem 0;
+  color: var(--terminal-fg);
+}
+
+li::marker {
+  color: var(--terminal-green);
+}
+
+/* Terminal-style prompt for lists with Nerd Font icons */
+ul li {
+  list-style: none;
+  position: relative;
+}
+
+ul li::before {
+  content: ">"; /* ASCII arrow */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  color: var(--terminal-green);
+  font-weight: bold;
+  position: absolute;
+  left: -1.2rem;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  background: var(--terminal-bg-light);
+  border: 1px solid var(--terminal-border);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid var(--terminal-border);
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+th {
+  background: var(--terminal-gray-dark);
+  color: var(--terminal-white);
+  font-weight: 600;
+}
+
+/* Buttons and interactive elements */
+button {
+  background: var(--terminal-bg-light);
+  color: var(--terminal-fg);
+  border: 1px solid var(--terminal-border);
+  padding: 0.6rem 1.2rem;
+  font-family: "JetBrains Mono", monospace;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--terminal-border);
+  border-color: var(--terminal-green);
+  color: var(--terminal-green);
+  box-shadow: 0 0 8px rgba(164, 228, 0, 0.2);
+}
+
+/* Navigation controls */
+.slidev-nav {
+  background: var(--terminal-bg-light) !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 0 !important;
+  backdrop-filter: blur(8px);
+}
+
+.slidev-nav button {
+  color: var(--terminal-fg) !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.slidev-nav button:hover {
+  color: var(--terminal-green) !important;
+  background: var(--terminal-gray-dark) !important;
+}
+
+/* Terminal cursor effect */
+.terminal-cursor::after {
+  content: "█";
+  color: var(--terminal-green);
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slide transitions */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Special terminal window effect */
+.terminal-window {
+  background: var(--terminal-bg-light);
+  border: 1px solid var(--terminal-border);
+  border-radius: 0;
+  margin: 1.5rem 0;
+  box-shadow: var(--terminal-shadow);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: var(--terminal-gray-dark);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  background: var(--terminal-muted);
+}
+
+.terminal-content {
+  padding: 1.5rem;
+}
+
+/* Highlight classes */
+.highlight-green {
+  color: var(--terminal-green);
+}
+.highlight-white {
+  color: var(--terminal-white);
+}
+.highlight-muted {
+  color: var(--terminal-muted);
+}
+
+/* Neon text colors */
+.text-neon-cyan {
+  color: var(--neon-cyan);
+}
+.text-neon-pink {
+  color: var(--neon-pink);
+}
+.text-neon-yellow {
+  color: var(--neon-yellow);
+}
+.text-neon-green {
+  color: var(--neon-green);
+}
+.text-neon-orange {
+  color: var(--neon-orange);
+}
+
+/* Custom background classes */
+.bg-terminal-green {
+  background-color: var(--terminal-green);
+}
+.bg-terminal-white {
+  background-color: var(--terminal-white);
+}
+.bg-terminal-muted {
+  background-color: var(--terminal-muted);
+}
+
+/* Neon color backgrounds */
+.bg-neon-cyan {
+  background-color: var(--neon-cyan);
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.3);
+}
+.bg-neon-pink {
+  background-color: var(--neon-pink);
+  box-shadow: inset 0 0 20px rgba(255, 0, 255, 0.3);
+}
+.bg-neon-yellow {
+  background-color: var(--neon-yellow);
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, 0.3);
+}
+.bg-neon-green {
+  background-color: var(--neon-green);
+  box-shadow: inset 0 0 20px rgba(0, 255, 0, 0.3);
+}
+.bg-neon-orange {
+  background-color: var(--neon-orange);
+  box-shadow: inset 0 0 20px rgba(255, 69, 0, 0.3);
+}
+
+/* Neon border colors */
+.border-neon-cyan {
+  border-color: var(--neon-cyan);
+}
+.border-neon-pink {
+  border-color: var(--neon-pink);
+}
+.border-neon-yellow {
+  border-color: var(--neon-yellow);
+}
+.border-neon-green {
+  border-color: var(--neon-green);
+}
+.border-neon-orange {
+  border-color: var(--neon-orange);
+}
+
+/* Center text with terminal aesthetics */
+.text-center {
+  text-align: center;
+}
+
+/* Large text for impact */
+.text-large {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.text-xl {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Subtle animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
